@@ -99,7 +99,7 @@
 </body>
 <script src="js/jquery.js"></script>
 <script>
-    
+    $(function(){
    var index=0;
    //鼠标滑动到小圆点上时的圆点和图片变化效果
    $(".circle li").mousemove(function () {
@@ -111,8 +111,9 @@
    function move() {
        index++;
        if (index==8){
-           index=0
+           index=0;
        }
+      
        $(".circle li").eq(index).addClass("current").siblings().removeClass("current");
        $(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
    };
@@ -137,11 +138,12 @@
    function moveL() {
         index--;
        if (index==-1){
-           index=7
+           index=7;
        }
        $(".circle li").eq(index).addClass("current").siblings().removeClass("current");
        $(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
    }
+})
    
 </script>
 </html>
